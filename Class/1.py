@@ -25,6 +25,10 @@ class CalDivide(CalMultiply):
         result = self.v1/self.v2
         Cal._history.append("devide:%d/%d=%d" % (self.v1,self.v2,result))
         return result
+    def duble(self):
+        result = self.v1**self.v2
+        Cal._history.append("devide:%d**%d=%d" % (self.v1,self.v2,result))
+        return result
 
 c1 = CalDivide(10,10)
 print(c1.add())
@@ -35,6 +39,7 @@ print(c1.add())
 print(c1.subtract())
 print(c1.devide())
 print(c1.multiply())
+print(c1.duble())
 
 Cal.history()
 
