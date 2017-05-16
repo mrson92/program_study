@@ -16,23 +16,26 @@ class Cal(object):
         for item in Cal._history:
             print(item)
 class CalMultiply(Cal):
-    def mutiply(self):
+    def multiply(self):
          result = self.v1*self.v2
          Cal._history.append("multiply:%d*%d=%d" % (self.v1,self.v2,result))
          return result
-class CalDivice(CalMultiply):
+class CalDivide(CalMultiply):
     def devide(self):
         result = self.v1/self.v2
         Cal._history.append("devide:%d/%d=%d" % (self.v1,self.v2,result))
         return result
 
-c1 = Cal(10,10)
+c1 = CalDivide(10,10)
 print(c1.add())
 print(c1.subtract())
 # c1.v2 = 30
 # c1.setV1('one')
 print(c1.add())
 print(c1.subtract())
+print(c1.devide())
+print(c1.multiply())
+
 Cal.history()
 
 # c2 = Cal(30,20)
